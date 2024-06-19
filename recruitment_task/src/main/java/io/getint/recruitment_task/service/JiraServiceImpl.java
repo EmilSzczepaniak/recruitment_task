@@ -46,7 +46,7 @@ public class JiraServiceImpl implements JiraService {
 
     public List<Issue> getIssuesFromProject(String projectKey, int maxResults) throws IOException {
         String url = jiraConfig.getBaseUrl() + "/rest/api/3/search?jql=project=" + projectKey + "&maxResults=" + maxResults;
-        logger.info("Fetching issues from URL: {}", url); // Log the URL for debugging
+        logger.info("Fetching issues from URL: {}", url);
         HttpGet request = new HttpGet(url);
         request.addHeader("Authorization", getAuthHeader());
         request.addHeader("Accept", "application/json");
