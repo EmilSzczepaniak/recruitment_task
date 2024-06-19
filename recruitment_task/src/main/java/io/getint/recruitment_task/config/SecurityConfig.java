@@ -14,10 +14,10 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/api/jira/sync").permitAll()  // Allow unauthenticated access to this endpoint
+                .antMatchers("/api/jira/sync").permitAll()
                 .anyRequest().authenticated()
                 .and()
-                .csrf().disable();  // Disable CSRF for simplicity, consider the security implications in a real application
+                .csrf().disable();
 
         return http.build();
     }
