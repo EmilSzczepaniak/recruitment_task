@@ -17,7 +17,7 @@ public class TestSecurityConfig {
         http
                 .authorizeRequests().anyRequest().permitAll() // Allow all requests without authentication
                 .and()
-                .csrf().disable(); // Disable CSRF for simplicity in tests
+                .csrf().disable();
 
         return http.build();
     }
