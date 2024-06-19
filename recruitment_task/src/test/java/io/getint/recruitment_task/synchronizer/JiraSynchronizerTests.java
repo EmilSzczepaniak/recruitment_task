@@ -1,7 +1,6 @@
-package io.getint.recruitment_task;
+package io.getint.recruitment_task.synchronizer;
 
 import io.getint.recruitment_task.service.JiraServiceImpl;
-import io.getint.recruitment_task.synchronizer.JiraSynchronizerImpl;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;

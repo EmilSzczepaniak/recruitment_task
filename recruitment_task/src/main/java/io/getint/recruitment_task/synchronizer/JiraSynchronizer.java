@@ -1,8 +1,7 @@
-package io.getint.recruitment_task;
+package io.getint.recruitment_task.synchronizer;
 
-import java.io.IOException;
+public interface JiraSynchronizer {
 
-public class JiraSynchronizer {
     /**
      * Search for 5 tickets in one project, and move them
      * to the other project within same Jira instance.
@@ -12,6 +11,5 @@ public class JiraSynchronizer {
      * - priority
      * Bonus points for syncing comments.
      */
-    public void moveTasksToOtherProject() throws Exception {
-    }
+    void moveTasksToOtherProject() throws Exception;
 }
