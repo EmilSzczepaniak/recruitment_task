@@ -92,7 +92,7 @@ public class JiraServiceImpl implements JiraService {
 
         try (CloseableHttpResponse response = httpClient.execute(request)) {
             String responseString = EntityUtils.toString(response.getEntity());
-            logger.info("Response from JIRA: {}", responseString); // Log the full response
+            logger.info("Response from JIRA: {}", responseString);
             if (response.getStatusLine().getStatusCode() != 201) {
                 logger.error("Failed to create issue in project: {}. Response: {}. Full response: {}", targetProjectKey, response.getStatusLine(), responseString);
                 throw new RuntimeException("Failed to create issue in project: " + targetProjectKey);
